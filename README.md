@@ -54,47 +54,41 @@ We are going to enlarge our model zoo in the future.
 Please refer to [MST++](https://github.com/caiyuanhao1998/MST-plus-plus)
 
 ## 3. Evaluation on the Validation Set:
-
-(1)  Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1G1GOA0FthtmOERJIJ0pALOSgXc6XOfoY?usp=sharing) / [Baidu Disk](https://pan.baidu.com/s/14L6T5SsUejepsc63XS9Xsw), code: `mst1`) and place them to `/MST-plus-plus/test_develop_code/model_zoo/`. 
-
-(2)  Run the following command to test the model on the validation RGB images. 
+Run the following command to test the model on the validation RGB images. 
 
 ```shell
-cd /MST-plus-plus/test_develop_code/
+cd /SSmamba/test_develop_code/
 
-# test MST++
-python test.py --data_root ../dataset/  --method mst_plus_plus --pretrained_model_path ./model_zoo/mst_plus_plus.pth --outf ./exp/mst_plus_plus/  --gpu_id 0
-
-# test MST-L
-python test.py --data_root ../dataset/  --method mst --pretrained_model_path ./model_zoo/mst.pth --outf ./exp/mst/  --gpu_id 0
-
-# test MIRNet
-python test.py --data_root ../dataset/  --method mirnet --pretrained_model_path ./model_zoo/mirnet.pth --outf ./exp/mirnet/  --gpu_id 0
-
-# test HINet
-python test.py --data_root ../dataset/  --method hinet --pretrained_model_path ./model_zoo/hinet.pth --outf ./exp/hinet/  --gpu_id 0
+# test SSmamba
+python test.py --data_root ../dataset/  --method SSmamba --pretrained_model_path ./model_zoo/SSmamba.pth --outf ./exp/ssmamba/  --gpu_id 0
 
 # test MPRNet
 python test.py --data_root ../dataset/  --method mprnet --pretrained_model_path ./model_zoo/mprnet.pth --outf ./exp/mprnet/  --gpu_id 0
 
+# test HINet
+python test.py --data_root ../dataset/  --method hinet --pretrained_model_path ./model_zoo/hinet.pth --outf ./exp/hinet/  --gpu_id 0
+
 # test Restormer
 python test.py --data_root ../dataset/  --method restormer --pretrained_model_path ./model_zoo/restormer.pth --outf ./exp/restormer/  --gpu_id 0
 
-# test EDSR
-python test.py --data_root ../dataset/  --method edsr --pretrained_model_path ./model_zoo/edsr.pth --outf ./exp/edsr/  --gpu_id 0
+# test MIRNet
+python test.py --data_root ../dataset/  --method mirnet --pretrained_model_path ./model_zoo/mirnet.pth --outf ./exp/mirnet/  --gpu_id 0
+
+# test MambaIR
+python test.py --data_root ../dataset/  --method mirnet --pretrained_model_path ./model_zoo/mambair.pth --outf ./exp/mambair/  --gpu_id 0
+
+# test AWAN
+python test.py --data_root ../dataset/  --method awan --pretrained_model_path ./model_zoo/awan.pth --outf ./exp/awan/  --gpu_id 0
 
 # test HDNet
 python test.py --data_root ../dataset/  --method hdnet --pretrained_model_path ./model_zoo/hdnet.pth --outf ./exp/hdnet/  --gpu_id 0
 
-# test HRNet
-python test.py --data_root ../dataset/  --method hrnet --pretrained_model_path ./model_zoo/hrnet.pth --outf ./exp/hrnet/  --gpu_id 0
+# test EDSR
+python test.py --data_root ../dataset/  --method edsr --pretrained_model_path ./model_zoo/edsr.pth --outf ./exp/edsr/  --gpu_id 0
 
 # test HSCNN+
 python test.py --data_root ../dataset/  --method hscnn_plus --pretrained_model_path ./model_zoo/hscnn_plus.pth --outf ./exp/hscnn_plus/  --gpu_id 0
 
-# test AWAN
-python test.py --data_root ../dataset/  --method awan --pretrained_model_path ./model_zoo/awan.pth --outf ./exp/awan/  --gpu_id 0
-```
 
 The results will be saved in `/MST-plus-plus/test_develop_code/exp/` in the mat format and the evaluation metric (including MRAE,RMSE,PSNR) will be printed.
 
