@@ -7,9 +7,8 @@
 
 
 ## Network Architecture
-![Illustration of MST](/figure/MST.png)
+![Illustration of SSMamba](/figure/SSmamba_Architeture.png)
 
-Our MST++ is mainly based on our work [MST](https://github.com/caiyuanhao1998/MST), which is accepted by CVPR 2022.
 
 ## Comparison with State-of-the-art Methods
 This repo is a baseline and toolbox containing 11 image restoration algorithms for Spectral Reconstruction.
