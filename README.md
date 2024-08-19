@@ -53,7 +53,7 @@ We are going to enlarge our model zoo in the future.
 
 Please refer to [MST++](https://github.com/caiyuanhao1998/MST-plus-plus)
 
-## 3. Evaluation on the Validation Set:
+## 3. Test on the Validation Set:
 Run the following command to test the model on the validation RGB images. 
 
 ```shell
@@ -88,9 +88,11 @@ python test.py --data_root ../dataset/  --method edsr --pretrained_model_path ./
 
 # test HSCNN+
 python test.py --data_root ../dataset/  --method hscnn_plus --pretrained_model_path ./model_zoo/hscnn_plus.pth --outf ./exp/hscnn_plus/  --gpu_id 0
+```
+
+The results will be saved in `/SSmamba/test_develop_code/exp/` in the mat format and the evaluation metric (including MRAE,RMSE,PSNR) will be printed.
 
 
-The results will be saved in `/MST-plus-plus/test_develop_code/exp/` in the mat format and the evaluation metric (including MRAE,RMSE,PSNR) will be printed.
 
 
 ## 4. Training
