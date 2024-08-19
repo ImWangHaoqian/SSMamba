@@ -38,14 +38,14 @@ We are going to enlarge our model zoo in the future.
 
 ## 1. Create Envirement:
 
-- Python 3 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
+- Python 3.10
 
-- NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads)
+- Pytorch 2.0.1+cu117
 
 - Python packages:
 
   ```shell
-  cd MST-plus-plus
+  cd SSMamba
   pip install -r requirements.txt
   ```
 
@@ -140,47 +140,6 @@ from utils import my_summary
 my_summary(MST_Plus_Plus(), 256, 256, 3, 1)
 ```
 
-## 4. Evaluation on the Test Set:
-
-(1)  Download the pretrained model zoo from ([Google Drive](https://drive.google.com/drive/folders/1G1GOA0FthtmOERJIJ0pALOSgXc6XOfoY?usp=sharing) / [Baidu Disk](https://pan.baidu.com/s/14L6T5SsUejepsc63XS9Xsw), code: `mst1`) and place them to `/MST-plus-plus/test_challenge_code/model_zoo/`. 
-
-(2)  Run the following command to test the model on the testing RGB images. 
-
-```shell
-cd /MST-plus-plus/test_challenge_code/
-
-# test MST++
-python test.py --data_root ../dataset/  --method mst_plus_plus --pretrained_model_path ./model_zoo/mst_plus_plus.pth --outf ./exp/mst_plus_plus/  --gpu_id 0
-
-# test MST-L
-python test.py --data_root ../dataset/  --method mst --pretrained_model_path ./model_zoo/mst.pth --outf ./exp/mst/  --gpu_id 0
-
-# test MIRNet
-python test.py --data_root ../dataset/  --method mirnet --pretrained_model_path ./model_zoo/mirnet.pth --outf ./exp/mirnet/  --gpu_id 0
-
-# test HINet
-python test.py --data_root ../dataset/  --method hinet --pretrained_model_path ./model_zoo/hinet.pth --outf ./exp/hinet/  --gpu_id 0
-
-# test MPRNet
-python test.py --data_root ../dataset/  --method mprnet --pretrained_model_path ./model_zoo/mprnet.pth --outf ./exp/mprnet/  --gpu_id 0
-
-# test Restormer
-python test.py --data_root ../dataset/  --method restormer --pretrained_model_path ./model_zoo/restormer.pth --outf ./exp/restormer/  --gpu_id 0
-
-# test EDSR
-python test.py --data_root ../dataset/  --method edsr --pretrained_model_path ./model_zoo/edsr.pth --outf ./exp/edsr/  --gpu_id 0
-
-# test HDNet
-python test.py --data_root ../dataset/  --method hdnet --pretrained_model_path ./model_zoo/hdnet.pth --outf ./exp/hdnet/  --gpu_id 0
-
-# test HRNet
-python test.py --data_root ../dataset/  --method hrnet --pretrained_model_path ./model_zoo/hrnet.pth --outf ./exp/hrnet/  --gpu_id 0
-
-# test HSCNN+
-python test.py --data_root ../dataset/  --method hscnn_plus --pretrained_model_path ./model_zoo/hscnn_plus.pth --outf ./exp/hscnn_plus/  --gpu_id 0
-```
-
-The results and submission.zip will be saved in `/MST-plus-plus/test_challenge_code/exp/`.
 
 ## 5. Training
 
@@ -278,35 +237,3 @@ cd visualization/
 Run show_simulation.m
 ```
 
-## Citation
-If this repo helps you, please consider citing our works:
-
-```shell
-
-# MST
-@inproceedings{mst,
-  title={Mask-guided Spectral-wise Transformer for Efficient Hyperspectral Image Reconstruction},
-  author={Yuanhao Cai and Jing Lin and Xiaowan Hu and Haoqian Wang and Xin Yuan and Yulun Zhang and Radu Timofte and Luc Van Gool},
-  booktitle={CVPR},
-  year={2022}
-}
-
-
-# MST++
-@inproceedings{mst_pp,
-  title={MST++: Multi-stage Spectral-wise Transformer for Efficient Spectral Reconstruction},
-  author={Yuanhao Cai and Jing Lin and Zudi Lin and Haoqian Wang and Yulun Zhang and Hanspeter Pfister and Radu Timofte and Luc Van Gool},
-  booktitle={CVPRW},
-  year={2022}
-}
-
-
-# HDNet
-@inproceedings{hdnet,
-  title={HDNet: High-resolution Dual-domain Learning for Spectral Compressive Imaging},
-  author={Xiaowan Hu and Yuanhao Cai and Jing Lin and  Haoqian Wang and Xin Yuan and Yulun Zhang and Radu Timofte and Luc Van Gool},
-  booktitle={CVPR},
-  year={2022}
-}
-
-```
