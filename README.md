@@ -7,11 +7,11 @@
 
 
 ## Network Architecture
-![Illustration of SSMamba](/figure/SSmamba_Architeture.png)
+![Illustration of SSMamba](/figure/SSmamba_Architecture.png)
 
 
 ## Comparison with State-of-the-art Methods
-This repo is a baseline and toolbox containing 11 image restoration algorithms for Spectral Reconstruction.
+This repo is a baseline and toolbox containing 10 image restoration algorithms for Spectral Reconstruction.
 
 We are going to enlarge our model zoo in the future.
 
@@ -19,17 +19,18 @@ We are going to enlarge our model zoo in the future.
 <details open>
 <summary><b>Supported algorithms:</b></summary>
 
-* [x] [MST++](https://arxiv.org/abs/2111.07910) (CVPRW 2022)
-* [x] [MST](https://arxiv.org/abs/2111.07910) (CVPR 2022)
-* [x] [HDNet](https://arxiv.org/abs/2203.02149) (CVPR 2022)
-* [x] [Restormer](https://arxiv.org/abs/2111.09881) (CVPR 2022)
-* [x] [MPRNet](https://arxiv.org/abs/2102.02808) (CVPR 2021)
-* [x] [HINet](https://arxiv.org/abs/2105.06086) (CVPRW 2021)
-* [x] [MIRNet](https://arxiv.org/abs/2003.06792) (ECCV 2020)
-* [x] [AWAN](https://arxiv.org/abs/2005.09305) (CVPRW 2020)
-* [x] [HRNet](https://arxiv.org/abs/2005.04703) (CVPRW 2020)
 * [x] [HSCNN+](https://openaccess.thecvf.com/content_cvpr_2018_workshops/w13/html/Shi_HSCNN_Advanced_CNN-Based_CVPR_2018_paper.html) (CVPRW 2018)
 * [x] [EDSR](https://arxiv.org/abs/1707.02921) (CVPRW 2017)
+* [x] [HDNet](https://arxiv.org/abs/2203.02149) (CVPR 2022)
+* [x] [AWAN](https://arxiv.org/abs/2005.09305) (CVPRW 2020)
+* [x] [MambaIR](https://arxiv.org/abs/2402.15648) (ECCV 2024)
+* [x] [MIRNet](https://arxiv.org/abs/2003.06792) (ECCV 2020)
+* [x] [Restormer](https://arxiv.org/abs/2111.09881) (CVPR 2022)
+* [x] [HINet](https://arxiv.org/abs/2105.06086) (CVPRW 2021)
+* [x] [MPRNet](https://arxiv.org/abs/2102.02808) (CVPR 2021)
+* [x] [MST++](https://arxiv.org/abs/2111.07910) (CVPRW 2022)
+
+
 
 </details>
 
