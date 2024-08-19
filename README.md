@@ -92,14 +92,6 @@ python test.py --data_root ../dataset/  --method hscnn_plus --pretrained_model_p
 
 The results will be saved in `/MST-plus-plus/test_develop_code/exp/` in the mat format and the evaluation metric (including MRAE,RMSE,PSNR) will be printed.
 
-- #### Evaluating the Params and FLOPS of models
-We have provided a function `my_summary()` in `test_develop_code/utils.py`, please use this function to evaluate the parameters and computational complexity of the models, especially the Transformers as
-
-```shell
-from utils import my_summary
-my_summary(MST_Plus_Plus(), 256, 256, 3, 1)
-```
-
 
 ## 5. Training
 
