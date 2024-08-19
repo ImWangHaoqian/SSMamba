@@ -51,41 +51,7 @@ We are going to enlarge our model zoo in the future.
 
 ## 2. Data Preparation:
 
-- Download training spectral images ([Google Drive](https://drive.google.com/file/d/1FQBfDd248dCKClR-BpX5V2drSbeyhKcq/view) / [Baidu Disk](https://pan.baidu.com/s/1NisQ6NjGvVhc0iOLH7OFvg), code: `mst1`), training RGB images ([Google Drive](https://drive.google.com/file/d/1A4GUXhVc5k5d_79gNvokEtVPG290qVkd/view) / [Baidu Disk](https://pan.baidu.com/s/1k7aSSL5MMipWYszlFaBLkA)),  validation spectral images ([Google Drive](https://drive.google.com/file/d/12QY8LHab3gzljZc3V6UyHgBee48wh9un/view) / [Baidu Disk](https://pan.baidu.com/s/1CIb5AqLWJxaGilTPtmWl0A)), validation RGB images ([Google Drive](https://drive.google.com/file/d/19vBR_8Il1qcaEZsK42aGfvg5lCuvLh1A/view) / [Baidu Disk](https://pan.baidu.com/s/1YakbXgBgnhNmYoxySmZaGw)), and testing RGB images ([Google Drive](https://drive.google.com/file/d/1A5309Gk7kNFI-ORyADueiPOCMQNTA7r5/view) / [Baidu Disk](https://pan.baidu.com/s/1RXHK64mUfK_GeeoLzqAmeQ)) from the [competition website](https://codalab.lisn.upsaclay.fr/competitions/721#participate-get_data) of NTIRE 2022 Spectral Reconstruction Challenge.
-
-- Place the training spectral images and validation spectral images to `/MST-plus-plus/dataset/Train_Spec/`.
-
-- Place the training RGB images and validation RGB images to `/MST-plus-plus/dataset/Train_RGB/`.
-
-- Place the testing RGB images  to `/MST-plus-plus/dataset/Test_RGB/`.
-
-- Then this repo is collected as the following form:
-
-  ```shell
-  |--MST-plus-plus
-      |--test_challenge_code
-      |--test_develop_code
-      |--train_code  
-      |--dataset 
-          |--Train_Spec
-              |--ARAD_1K_0001.mat
-              |--ARAD_1K_0002.mat
-              ： 
-              |--ARAD_1K_0950.mat
-		|--Train_RGB
-              |--ARAD_1K_0001.jpg
-              |--ARAD_1K_0002.jpg
-              ： 
-              |--ARAD_1K_0950.jpg
-          |--Test_RGB
-              |--ARAD_1K_0951.jpg
-              |--ARAD_1K_0952.jpg
-              ： 
-              |--ARAD_1K_1000.jpg
-          |--split_txt
-              |--train_list.txt
-              |--valid_list.txt
-  ```
+Please refer to [MST++](https://github.com/caiyuanhao1998/MST-plus-plus)
 
 ## 3. Evaluation on the Validation Set:
 
