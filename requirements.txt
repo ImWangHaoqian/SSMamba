@@ -1,0 +1,7 @@
+opencv-python==4.8.1.78
+einops
+torchvision==0.15.2+cu117
+scipy==1.11.3
+h5py
+hdf5storage
+tqdm
