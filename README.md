@@ -93,48 +93,50 @@ python test.py --data_root ../dataset/  --method hscnn_plus --pretrained_model_p
 The results will be saved in `/MST-plus-plus/test_develop_code/exp/` in the mat format and the evaluation metric (including MRAE,RMSE,PSNR) will be printed.
 
 
-## 5. Training
+## 4. Training
 
 To train a model, run
 
 ```shell
-cd /MST-plus-plus/train_code/
+cd /SSMamba/train_code/
+
+# train SSMamba
+python train.py --method ssmamba  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/ssmamba/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train MST++
-python train.py --method mst_plus_plus  --batch_size 20 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mst_plus_plus/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
-
-# train MST-L
-python train.py --method mst  --batch_size 20 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mst/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
-
-# train MIRNet
-python train.py --method mirnet  --batch_size 20 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mirnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
-
-# train HINet
-python train.py --method hinet  --batch_size 20 --end_epoch 300 --init_lr 2e-4 --outf ./exp/hinet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+python train.py --method mst_plus_plus  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mst_plus_plus/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train MPRNet
-python train.py --method mprnet  --batch_size 20 --end_epoch 300 --init_lr 2e-4 --outf ./exp/mprnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+python train.py --method mprnet  --batch_size 10 --end_epoch 300 --init_lr 2e-4 --outf ./exp/mprnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+
+# train HINet
+python train.py --method hinet  --batch_size 10 --end_epoch 300 --init_lr 2e-4 --outf ./exp/hinet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train Restormer
-python train.py --method restormer  --batch_size 20 --end_epoch 300 --init_lr 2e-4 --outf ./exp/restormer/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+python train.py --method restormer  --batch_size 10 --end_epoch 300 --init_lr 2e-4 --outf ./exp/restormer/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
-# train EDSR
-python train.py --method edsr  --batch_size 20 --end_epoch 300 --init_lr 1e-4 --outf ./exp/edsr/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+# train MIRNet
+python train.py --method mirnet  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mirnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
-# train HDNet
-python train.py --method hdnet  --batch_size 20 --end_epoch 300 --init_lr 4e-4 --outf ./exp/hdnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
-
-# train HRNet
-python train.py --method hrnet  --batch_size 20 --end_epoch 300 --init_lr 1e-4 --outf ./exp/hrnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
-
-# train HSCNN+
-python train.py --method hscnn_plus  --batch_size 20 --end_epoch 300 --init_lr 2e-4 --outf ./exp/hscnn_plus/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+# train MambaIR
+python train.py --method mambair  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mambair/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train AWAN
-python train.py --method awan  --batch_size 20 --end_epoch 300 --init_lr 1e-4 --outf ./exp/awan/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+python train.py --method awan  --batch_size 5 --end_epoch 300 --init_lr 1e-4 --outf ./exp/awan/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0 (We trained on A6000 due to GPU memory overflow)
+
+# train HDNet
+python train.py --method hdnet  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/hdnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+
+# train EDSR
+python train.py --method edsr  --batch_size 10 --end_epoch 300 --init_lr 1e-4 --outf ./exp/edsr/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+
+# train HSCNN+
+python train.py --method hscnn_plus  --batch_size 10 --end_epoch 300 --init_lr 2e-4 --outf ./exp/hscnn_plus/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+
+
 ```
 
-The training log and models will be saved in `/MST-plus-plus/train_code/exp/`.
+The training log and models will be saved in `/SSmamba/train_code/exp/`.
 
 ## 6. Prediction
 
