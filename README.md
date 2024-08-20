@@ -121,7 +121,7 @@ python train.py --method restormer  --batch_size 10 --end_epoch 300 --init_lr 2e
 python train.py --method mirnet  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mirnet/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train MambaIR
-python train.py --method mambair  --batch_size 10 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mambair/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
+python train.py --method mambair  --batch_size 2 --end_epoch 300 --init_lr 4e-4 --outf ./exp/mambair/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0
 
 # train AWAN
 python train.py --method awan  --batch_size 5 --end_epoch 300 --init_lr 1e-4 --outf ./exp/awan/ --data_root ../dataset/  --patch_size 128 --stride 8  --gpu_id 0 (We trained on A6000 due to GPU memory overflow)
