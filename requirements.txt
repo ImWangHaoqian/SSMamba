@@ -5,3 +5,5 @@ scipy==1.11.3
 h5py
 hdf5storage
 tqdm
+mamba-ssm==1.0.1
+causal-conv1d==1.0.0
