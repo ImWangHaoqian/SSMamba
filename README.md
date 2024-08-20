@@ -140,14 +140,4 @@ python train.py --method hscnn_plus  --batch_size 10 --end_epoch 300 --init_lr 2
 
 The training log and models will be saved in `/SSmamba/train_code/exp/`.
 
-## 7. Visualization
-- Put the reconstruted HSI in `visualization/simulation_results/results/`.
-
-- Generate the RGB images of the reconstructed HSIs
-
-
-```shell
-cd visualization/
-Run show_simulation.m
-```
 
